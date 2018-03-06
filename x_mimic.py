@@ -45,11 +45,23 @@ class Mimic(object):
   
   def mimic_dict(self, novel):
     """입력된 url의 텍스트 영역을 읽어 단어를 추출하고 멤버변수인 m_dict에 저장한다"""
-    # +++your code here+++
-    with op (fn, 'r') as f:
-      word = f.read().lower.split()
+     # +++your code here+++
+    with open(fn, 'r') as f:
+      words = f.read().lower().split()
+    
+    # words를 m_dict에 넣어야함
+    prev = ' '
+    for word in words: # i, want, you
+      # 이전 워드가 키, 다음 워드가 벨류
+      # 키는 별도의 변수를 사용하자, word가 밸류로 들어간다
+      if prev not in self.m_dict.keys():
+        self.m_dict[prev] = ()
+      self.m_dict[prev].append(word)
+      # word가 다음 바퀴의 키
+      prev = word                        
 
-     return
+    return
+
     
   def print_mimic(self, word):
     """입력된 word로 문장을 시작하고 이어지는 단어를 랜덤하게 선택해가면서 word를 출력하자. 
