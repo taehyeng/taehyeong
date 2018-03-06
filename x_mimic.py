@@ -48,7 +48,14 @@ class Mimic(object):
     # +++your code here+++
     with op (fn, 'r') as f:
       word = f.read().lower.split()
+    prev = ' '
+    for word in words:
+      
+      if prev not in self.m_dict.keys():
+        self.m_dict[prev] = []
+      self.m_dict[prev].append(word)
 
+      prev = word
      return
     
   def print_mimic(self, word):
