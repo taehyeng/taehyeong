@@ -1,0 +1,13 @@
+# -*- coding: cp949 -*-
+#-*- cording: utf-8 -*-
+def yoonnun(num):
+    if (num % 4 == 0) & (num % 100 == 0) & (num % 400 == 0) :
+        out = u"À±³â"    
+    elif (num % 4 == 0) & (num % 100 == 0):
+        out = u"Æò³â"
+    elif (num % 4 == 0) :
+        out = u"À±³â"
+    else:
+        out = u"¸ô¶ó"
+        
+    return out
