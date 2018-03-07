@@ -1,5 +1,5 @@
 
-# -*- cording: utf-8 -*-
+# -*- coding: utf-8 -*-
 import unittest
 import tax
 
@@ -9,11 +9,11 @@ import tax
 class TAX(unittest.TestCase):
     def setUp(self):
         print '\n'
-        print "¸Þ¼Òµå¸¦ ½ÇÇàÇÕ´Ï´Ù."
+        print "ï¿½Þ¼Òµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."
 
     def tearDown(self):
         print '\n'
-        print "¸Þ¼Òµå¸¦ ¸ðµÎ Á¾·áÇÕ´Ï´Ù."
+        print "ï¿½Þ¼Òµå¸¦ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."
 
     def test_tex(self):
         self.assertEqual(tax.tex(16,30000,"children"), 13500)
